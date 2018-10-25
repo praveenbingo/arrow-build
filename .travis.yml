@@ -6,5 +6,6 @@ matrix:
   include:
   - os: linux
     language: java
+install: /bin/true    
 script:
   - "$TRAVIS_BUILD_DIR/deploy_gandiva_jar.sh"
