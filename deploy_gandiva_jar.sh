@@ -15,6 +15,8 @@
 # limitations under the License.
 set -e
 
+echo -e "in here"
+
 git clone https://github.com/praveenbingo/crossbow crossbow
 cd crossbow
 git fetch origin
@@ -22,8 +24,12 @@ branch=`git branch -r --sort=-committerdate | head -1 | awk '{split($0,a,"/"); p
 
 cd ${TRAVIS_BUILD_DIR}
 
+echo -e "in here"
 
 wget https://github.com/praveenbingo/crossbow/releases/download/${branch}/arrow-gandiva-0.12.0-SNAPSHOT.jar
+
+echo -e "in here"
+
 mvn --settings ossrh_settings.xml deploy:deploy-file -Durl=https://oss.sonatype.org/content/repositories/snapshots \
                 -DrepositoryId=ossrh \
                 -Dfile=arrow-gandiva-0.12.0-SNAPSHOT.jar \
