@@ -7,4 +7,4 @@ matrix:
   - os: linux
     language: java
 script:
-  - "$TRAVIS_BUILD_DIR/deploy_gandiva_jar.sh
+  - "$TRAVIS_BUILD_DIR/deploy_gandiva_jar.sh"
