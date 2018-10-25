@@ -30,7 +30,7 @@ wget https://github.com/praveenbingo/crossbow/releases/download/${branch}/arrow-
 
 echo -e "in here"
 
-mvn --settings ossrh_settings.xml deploy:deploy-file -Durl=https://oss.sonatype.org/content/repositories/snapshots \
+mvn --settings ossrh-settings.xml deploy:deploy-file -Durl=https://oss.sonatype.org/content/repositories/snapshots \
                 -DrepositoryId=ossrh \
                 -Dfile=arrow-gandiva-0.12.0-SNAPSHOT.jar \
                 -DpomFile=pom.xml
