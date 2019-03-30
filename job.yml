@@ -1,0 +1,26 @@
+!Job
+target: !Target
+  head: 928ce4fc0929d31ddcfa223c27a9f1a902d4614e
+  email: travis@example.org
+  branch: ARROW-4959-CentOS5
+  remote: https://github.com/praveenbingo/arrow
+  version: 0.9.0.dev2309
+  no_rc_version: 0.9.0.dev2309
+tasks:
+  gandiva-jar-trusty: !Task
+    platform: linux
+    template: gandiva-jars/travis.linux.yml
+    artifacts:
+    - arrow-gandiva-0.9.0.dev2309-SNAPSHOT.jar
+    params: {}
+    branch: nightly-32-gandiva-jar-trusty
+    commit: 6c9a3f30c6ebad369ddc4ad93d34020e27b686c0
+  gandiva-jar-osx: !Task
+    platform: osx
+    template: gandiva-jars/travis.osx.yml
+    artifacts:
+    - arrow-gandiva-0.9.0.dev2309-SNAPSHOT.jar
+    params: {}
+    branch: nightly-32-gandiva-jar-osx
+    commit: 8abc279d3ea9f9d3372e4f73b04f8ff60a864987
+branch: nightly-32
